@@ -33,7 +33,7 @@ fprintf('5x5 Identity Matrix: \n');
 warmUpExercise()
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 
 
 %% ======================= Part 2: Plotting =======================
@@ -47,7 +47,7 @@ m = length(y); % number of training examples
 plotData(X, y);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 
 %% =================== Part 3: Gradient descent ===================
 fprintf('Running Gradient Descent ...\n')
@@ -72,7 +72,7 @@ fprintf('%f %f \n', theta(1), theta(2));
 % Plot the linear fit
 hold on; % keep previous plot visible
 plot(X(:,2), X*theta, '-')
-legend('Training data', 'Linear regression')
+legend('Training data', 'Linear regression','northwest')
 hold off % don't overlay any more plots on this figure
 
 % Predict values for population sizes of 35,000 and 70,000
