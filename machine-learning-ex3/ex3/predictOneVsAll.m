@@ -28,15 +28,15 @@ X = [ones(m, 1) X];
 %       max element, for more information see 'help max'. If your examples 
 %       are in rows, then, you can use max(A, [], 2) to obtain the max 
 %       for each row.
-%       
+%
 
+% column represent prediction. [10, 401] * [5000 * 401]' =>  [10, 5000]
+prediction = all_theta * X';
 
-
-
-
-
+% max(matrix) largest element in each matrix column
+% max(matrix,[],2) largest element in each matrix row
+[maxval, maxindices] = max(prediction);
+p = maxindices';
 
 % =========================================================================
-
-
 end

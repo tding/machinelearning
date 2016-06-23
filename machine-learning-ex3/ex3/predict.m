@@ -21,12 +21,24 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+% Add ones to the X data matrix
+X = [ones(m, 1) X];
 
+% 
+a2 = sigmoid(Theta1 * X'); 
 
+%
 
+temp = size(a2);
+hidden_node = temp(1);
 
+display(ones(1,m));
+a2 = [ones(1, m);a2];
+display(size(a2));
+a3 = sigmoid(Theta2 * a2);
 
-
+[maxval, maxindices] = max(a3);
+p = maxindices';
 
 
 % =========================================================================

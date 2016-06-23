@@ -36,6 +36,8 @@ load('ex3data1.mat'); % training data stored in arrays X, y
 m = size(X, 1);
 
 % Randomly select 100 data points to display
+% randperm: Random permutation. 
+% randperm(n) returns a row vector containing a random permutation of the integers from 1 to n inclusive.
 rand_indices = randperm(m);
 sel = X(rand_indices(1:100), :);
 
